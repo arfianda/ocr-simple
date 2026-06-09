@@ -1,18 +1,18 @@
 Berikut adalah file `README.md` untuk repository GitHub Anda.
 
-```markdown
+````markdown
 # Deteksi Pejalan Kaki menggunakan OpenCV
 
 Program deteksi pejalan kaki berbasis Computer Vision menggunakan metode HOG (Histogram of Oriented Gradients) dan Linear SVM yang disediakan oleh OpenCV. Program ini dapat mendeteksi pejalan kaki pada gambar statis maupun video.
 
 ## Identitas
 
-| Keterangan | Isi |
-|------------|-----|
-| Nama | Arfianda Firsta Satritama |
-| NIM | 312410377 |
-| Kelas | I.24.1C |
-| Mata Kuliah | Pengolahan Citra |
+| Keterangan  | Isi                       |
+| ----------- | ------------------------- |
+| Nama        | Arfianda Firsta Satritama |
+| NIM         | 312410377                 |
+| Kelas       | I.24.1C                   |
+| Mata Kuliah | Pengolahan Citra          |
 
 ## Daftar Isi
 
@@ -58,6 +58,7 @@ OpenCV telah menyediakan model HOG + Linear SVM yang telah dilatih khusus untuk 
 git clone https://github.com/username/deteksi-pejalan-kaki.git
 cd deteksi-pejalan-kaki
 ```
+````
 
 ### 2. Buat Virtual Environment (Opsional namun direkomendasikan)
 
@@ -138,6 +139,7 @@ for (x, y, w, h) in regions:
 ```
 
 Parameter `detectMultiScale`:
+
 - `winStride` : jarak pergeseran window deteksi
 - `padding` : tambahan piksel di sekitar window
 - `scale` : faktor skala untuk deteksi multi-skala
@@ -151,16 +153,16 @@ while cap.isOpened():
     ret, image = cap.read()
     if not ret:
         break
-    
+
     # Proses deteksi setiap frame
     (regions, _) = hog.detectMultiScale(image, winStride=(4, 4),
                                         padding=(4, 4), scale=1.05)
-    
+
     for (x, y, w, h) in regions:
         cv2.rectangle(image, (x, y), (x + w, y + h), (0, 0, 255), 2)
-    
+
     cv2.imshow("Image", image)
-    
+
     if cv2.waitKey(25) & 0xFF == ord('q'):
         break
 ```
@@ -171,7 +173,7 @@ while cap.isOpened():
 
 Berikut adalah contoh hasil deteksi pejalan kaki pada gambar statis:
 
-![output_gambar](screenshots/ss1.png)
+![output_gambar](screenshot/ss1.png)
 
 ### Output Deteksi pada Video
 
