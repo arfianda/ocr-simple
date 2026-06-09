@@ -179,7 +179,7 @@ Berikut adalah contoh hasil deteksi pejalan kaki pada gambar statis:
 
 Berikut adalah contoh hasil deteksi pejalan kaki pada video:
 
-<video src="/screenshot/videoocr.mov" controls="controls" style="max-width: 730px;"></video>
+[https://drive.google.com/file/d/1g27-tWcHONorNzy9c7BpYkqw9_W6vb_Q/view?usp=sharing](https://drive.google.com/file/d/1g27-tWcHONorNzy9c7BpYkqw9_W6vb_Q/view?usp=sharing) 
 
 ## Keterbatasan Program
 
